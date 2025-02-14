@@ -1,15 +1,13 @@
-import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Digite um número: ");
-        int num = scanner.nextInt();
-        if (num % 2 == 0) {
-            System.out.println("O número " + num + " é par.");
-        } else {
-            System.out.println("O número " + num + " é ímpar.");
-        }
-        scanner.close();
+        System.out.println(maiorNumero(10, 20, 30));
+    }
+
+    public static int maiorNumero(int a, int b, int c) {
+        if (a >= b && a >= c)
+            return a;
+        if (b >= a && b >= c)
+            return b;
+        return c;
     }
 }
